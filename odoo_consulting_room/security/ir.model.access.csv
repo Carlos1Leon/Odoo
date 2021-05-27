@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_consulting_room_patientrecord_admin,odoo_consulting_room_patientrecord,model_odoo_consulting_room_patientrecord,base.group_system,1,1,1,1
+access_odoo_consulting_room_treatmentspatient_admin,odoo_consulting_room_treatmentspatient,model_odoo_consulting_room_treatmentspatient,base.group_system,1,1,1,1

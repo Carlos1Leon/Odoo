@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="odoo_consulting_room.menu_reporte_main" model="ir.ui.menu">
+            <field name="name">Reportes</field>
+            <field name="parent_id" ref="odoo_consulting_room.menu_root"/>
+        </record>
+
+        <!-- Wizard-->
+        <record model="ir.ui.view" id="odoo_consulting_room_treatments_wizard_form_view">
+            <field name="name">odoo_consulting_room.treatments.wizard.form</field>
+            <field name="model">odoo_consulting_room.treatments</field>
+            <field name="arch" type="xml">
+                <form string="Reporte de tratamientos más solicitados por los pacientes">
+                    <footer>
+                    <button name="print_excel" string="Generar Reporte" class="oe_right oe_highlight" type="object"/>
+                    <button string="Cancelar" special="cancel"/>
+                </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="odoo_consulting_room.action_odoo_consulting_room_treatments_wizard" model="ir.actions.act_window">
+            <field name="name">Reporte de tratamientos más solicitados por los pacientes</field>
+            <field name="res_model">odoo_consulting_room.treatments</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="odoo_consulting_room.menu_odoo_consulting_room_treatments_wizard" model="ir.ui.menu">
+            <field name="name">Reporte de tratamientos más solicitados por los pacientes</field>
+            <field name="action" ref="odoo_consulting_room.action_odoo_consulting_room_treatments_wizard"/>
+            <field name="parent_id" ref="odoo_consulting_room.menu_reporte_main"/>
+        </record>
+
+        <!-- Wizard-->
+        <record model="ir.ui.view" id="odoo_consulting_room_attended_wizard_form_view">
+            <field name="name">odoo_consulting_room.attended.wizard.form</field>
+            <field name="model">odoo_consulting_room.attended</field>
+            <field name="arch" type="xml">
+                <form string="Reporte de pacientes que asistieron a menos consultas">
+                    <footer>
+                    <button name="print_excel" string="Generar Reporte" class="oe_right oe_highlight" type="object"/>
+                    <button string="Cancelar" special="cancel"/>
+                </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="odoo_consulting_room.action_odoo_consulting_room_attended_wizard" model="ir.actions.act_window">
+            <field name="name">Reporte de pacientes que asistieron a menos consultas</field>
+            <field name="res_model">odoo_consulting_room.attended</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="odoo_consulting_room.menu_odoo_consulting_room_attended_wizard" model="ir.ui.menu">
+            <field name="name">Reporte de pacientes que asistieron a menos consultas</field>
+            <field name="action" ref="odoo_consulting_room.action_odoo_consulting_room_attended_wizard"/>
+            <field name="parent_id" ref="odoo_consulting_room.menu_reporte_main"/>
+        </record>
+
+    </data>
+</odoo>

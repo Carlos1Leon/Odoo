@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record  model="ir.ui.view" id="odoo_consulting_room_patientrecord_view_search">
+             <field name="name">consulting_room app search</field>
+             <field name="model">odoo_consulting_room.patientrecord</field>
+             <field name="type">search</field>
+             <field name="arch" type="xml">
+                 <search string="Consultorio">
+                    <field name="dni"/>
+                    <field name="name"/>
+                    <field name="last_name"/>
+                 </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="odoo_consulting_room_patientrecord_view_list">
+            <field name="name">consulting_room app tree</field>
+            <field name="model">odoo_consulting_room.patientrecord</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dni"/>
+                    <field name="name"/>
+                    <field name="last_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="odoo_consulting_room_patientrecord_view_form">
+            <field name="name">consulting_room app form</field>
+            <field name="model">odoo_consulting_room.patientrecord</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group string="Información del paciente">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:15%;"><label for="dni"/></td>
+                                        <td><field name="dni"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:15%;"><label for="name"/></td>
+                                        <td><field name="name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:15%;"><label for="last_name"/></td>
+                                        <td><field name="last_name"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </group>
+                        <group string="Datos Consultas">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:30%;"><label for="qty_consultations_attended"/></td>
+                                        <td><field name="qty_consultations_attended"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:30%;"><label for="qty_treatments"/></td>
+                                        <td><field name="qty_treatments"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </group>
+                        <notebook>
+                            <page string="Tratamienos realizados" id="treatments">
+                                <group>
+                                    <field name="trataments_ids" nolabel="1" widget="one2many_list">
+                                        <tree editable='bottom' delete='false' duplicate="0">
+                                            <field name="type_treatments"/>
+                                            <field name="mount"/>
+                                            <field name="patiente_record_id" invisible="True"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="odoo_consulting_room.action_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Consultorio</field>
+            <field name="res_model">odoo_consulting_room.patientrecord</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem name="Consultorio" id="odoo_consulting_room.menu_root"/>
+
+        <menuitem name="Registro de pacientes" id="odoo_consulting_room.menu_patient_record"
+                  parent="odoo_consulting_room.menu_root" action="odoo_consulting_room.action_window"
+        />
+
+  </data>
+</odoo>
