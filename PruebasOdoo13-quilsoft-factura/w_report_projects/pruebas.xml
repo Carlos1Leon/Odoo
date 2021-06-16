@@ -1,0 +1,102 @@
+               <table style="border-spacing:0;margin-bottom:0;" class="table">
+                    <thead>
+                        <tr>
+                            
+                            <td rowspan="2" class="text-center" style="border: 2px solid black;">
+                            <strong>
+                            <span>MARCA Y TIPO:  
+                            </span>
+                            </strong>
+                            </strong><span t-field="o.model_id" />
+                            </td>
+                            
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+
+
+                <div class="row">
+                                    <div class="col-md-12" align="center">
+                                        <h2>FORMATO PARA CONTROL DE VEHICULOS </h2>
+                                        <!--<h4>Versión Registro Manual</h4>-->
+                                        <!-- <h5>Fuente <span t-field="o.source" /></h5> -->
+                                       <!-- <h5>País <span t-field="" /></h5>-->
+                                    </div>
+                               
+
+
+
+
+
+                               <div class="row">
+                <table style="width:100%;">
+                    <tr>
+                        <td rowspan="2" width="30%" style="border-bottom: 1px solid black;border-top: 1px solid black;border-left: 1px solid black; border-right: 1px solid black;" align="left">Datos para facturación:</td>
+                        <td rowspan="2" class="text-center" witdth="70%" style="border-bottom: 1px solid black; vertical-align:middle;">Recepción de instrumentos o equipos</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+            <div class="header">
+                    <div class="text-muted text-right">
+                        página <span class="page"/> de <span class="topage"/>
+                    </div>
+                    <div class="row" style="margin-top: 25px;">
+                        <div class="col-4 mb4">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 70px;" alt="Logo"/>
+                        </div>
+                        <div class="col-4 mb4  text-left">
+                            
+                            <strong><span style="font-size: 20px;"><t t-esc="'de México, S. A. DE C. V'"/></span></strong>
+                        </div>
+                        <div class="col-4 text-right" name="moto">
+                            <span calss="text-center" style="font-family:'arialfont'; font-size: 14px;">Número</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:15%;border-left: 1px solid black;border-bottom: 1px solid black;">MARCA Y TIPO:</td>
+                        <td style="width:45%;border-left: 1px solid black;border-bottom: 1px solid black;"><span t-field="o.model_id" /> </td>
+                        <td style="width:20%;border-bottom: 1px solid black;"></td>
+                        <td style="width:30%;border-right: 1px solid black;border-bottom: 1px solid black;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">NOMBRE DE USUARIO:</td>
+                        <td style="width:45%;border-left: 1px solid black;border-bottom: 1px solid black;"><span t-field="o.driver_id" /> </td>
+                        <td style="width:20%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">MODELO::</td>
+                        <td style="width:30%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;"><span t-field="o.model_year" /> </td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%; border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">PLACAS DE CONTROL VEHICULA</td>
+                        <td style="width:45%;border-left: 1px solid black;border-bottom: 1px solid black;"><span t-field="o.license_plate" /> </td>
+                        <td style="width:20%;border-bottom: 1px solid black;"></td>
+                        <td style="width:30%;border-bottom: 1px solid black;border-right: 1px solid black;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">Contacto:</td>
+                        <!-- <td style="width:45%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;"><span t-if="o.sale_line_id.order_id.contact"><span style="font-family:'arialfont'; font-size: 14px;"  t-esc="o.sale_line_id.order_id.contact"/></span></td> -->
+                        <td style="width:45%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;"> </td>
+                        <td style="width:20%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">Correo Electrónico:</td>
+                        <td style="width:30%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;"> </td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%;border-left: 1px solid black; border-right: 1px solid black;border-bottom: 1px solid black;">Teléfono:</td>
+                        <td style="width:45%;border-left: 1px solid black; border-bottom: 1px solid black;"> </td>
+                        <td style="width:20%;border-bottom: 1px solid black;"></td>
+                        <td style="width:30%;border-bottom: 1px solid black; border-right: 1px solid black"></td>
+                    </tr>
+                </table>
+            </div>
