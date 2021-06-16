@@ -227,7 +227,7 @@
                                     <td style="border-left: 1px solid #808080;border-bottom:1px solid #cccccc;" name="product_key"><span t-esc="'%s - %s' % (line.product_id.l10n_mx_edi_code_sat_id.code or '', line.product_id.l10n_mx_edi_code_sat_id.name or '')"/></td>
                                     <td style="border-left: 1px solid #808080;border-bottom:1px solid #cccccc;" name="account_invoice_line_name"><span t-field="line.name"/></td>
                                     <td style="border-left: 1px solid #808080;border-bottom:1px solid #cccccc;" class="text-center">
-                                        <!--<span t-esc="'%s - %s' % (line.product_uom_id.l10n_mx_edi_code_sat_id.code, line.product_uom_id.l10n_mx_edi_code_sat_id.name)" groups="uom.group_uom"/>-->
+                                        <span t-esc="'%s - %s' % (line.product_uom_id.l10n_mx_edi_code_sat_id.code, line.product_uom_id.l10n_mx_edi_code_sat_id.name)" groups="uom.group_uom"/>
                                     </td>
                                     <td style="border-left: 1px solid #808080;border-bottom:1px solid #cccccc;" class="text-center">
                                         <span t-field="line.quantity"/>
